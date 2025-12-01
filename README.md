@@ -24,6 +24,47 @@ sm64coopdx is moddable via Lua, similar to Roblox and Garry's Mod's Lua APIs. To
 ## Wiki
 The wiki is made using GitHub's wiki feature, you can go to the wiki tab or click [here](https://github.com/ManIsCat2/sm64coopdx/wiki).
 
+
+Build this version:
+
+```
+yes|pkg update && yes|pkg upgrade
+```
+
+```
+termux-setup-storage
+```
+
+```
+pkg remove libglvnd
+```
+
+```
+pkg install git wget make python getconf zip apksigner clang binutils libglvnd-dev aapt libandroid-execinfo which
+```
+
+```
+git clone --recursive https://github.com/andromux/sm64coopdx-dynos-order.git --depth 1
+```
+
+```
+cd sm64coopdx-dynos-order/
+```
+
+```
+cp path/your/baserom.us.z64/ .
+```
+
+```
+make -j$(nproc)
+```
+
+## wait compiling
+
+```
+mv build/us_pc/sm64coopdx.apk /storage/emulated/0/sm64coopdx.apk
+```
+
 ## Discord
 This SM64CoopDX android port has a discord server that you can join if you have questions or want to report bugs or just wanna download the game.
 [discord link](https://discord.gg/WzQSRfHh6g)
